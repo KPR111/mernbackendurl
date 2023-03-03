@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const app = express();
 const cookieParser = require('cookie-parser');
 
-dotenv.config({path:'./.env'}); 
+// dotenv.config(); 
+require('dotenv').config();
 
  
 require('./db/conn'); 
@@ -15,7 +16,7 @@ const User = require('./model/userSchema');
 
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||5000;
 
 
 

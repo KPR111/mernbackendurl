@@ -101,6 +101,11 @@ router.post('/signin',async (req,res)=>{
 
 // about us page
 
+router.get('/try',(req,res)=>{
+    console.log("Hello my try");
+    res.send("Hello from the server try");
+})
+
 router.get('/about',authenticate,(req,res)=>{
     console.log("Hello my about");
     res.send(req.rootUser);
